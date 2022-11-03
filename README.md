@@ -160,7 +160,7 @@ We provide the pre-trained model (`pt. model`) and the finetuned model (`ft. mod
 
 ## Property Analysis
 
-To demonstrate models' differences in terms of weigths and outputs, we conduct property analysis using averaged attention distance and singular value decomposition. We compute the averaged attention distance for each attention head of different Transformer blocks. The results are averaged over IN1K validation set:
+To demonstrate models' differences in terms of their weigths and outputs, we conduct property analysis using averaged attention distance and singular value decomposition. We first compute the averaged attention distance for each attention head of different Transformer blocks. The results are averaged over IN1K validation set:
 
 <p align="center">
   <img src=".github/avd.png" width = "100%">
