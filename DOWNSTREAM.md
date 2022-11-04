@@ -1,4 +1,4 @@
-## Dowtream tasks for dBOT
+## Downstream tasks for dBOT
 ### Catalog
 
 - [x] Fine-tuning on ImageNet-1K
