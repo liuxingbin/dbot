@@ -1,9 +1,9 @@
-## Dowtream tasks for dBOT
+## Downstream tasks for dBOT
 ### Catalog
 
 - [x] Fine-tuning on ImageNet-1K
-- [x] COCO detection
-- [x] ADE20K segmentation
+- [x] Object detection and instance segmentation on COCO
+- [x] Semantic segmentation on ADE20K
 
 ### Fine-tuning on ImageNet-1K
 To fine-tune ViT on ImageNet-1k with multi-node distributed training, run the following scripts on 4 nodes with 8 GPUs each.
@@ -78,10 +78,10 @@ distill_clipl-vit-huge_finetune/checkpoint-best.pth \
 --enable_deepspeed
 ```
 
-### COCO detection
+### Object detection and instance segmentation on COCO
 The code and scripts is in `main` branch.
 To fine-tune ViT on COCO with Cascade Mask-RCNN as the task layer, run the following scripts:\
-**NOTE**: The model are pre-trained with abs position embedding.
+:dart: The model are pre-trained with absolute position embedding.
 
 ViT-B/16
 ```
@@ -119,7 +119,7 @@ model.backbone.use_shared_rel_pos_bias=False
 
 
 
-### ADE20K segmentation
+### Semantic segmentation on ADE20K
 :dart: We opt for iBOT's implementation for semantic segmentation following [iBOT](https://github.com/bytedance/ibot/tree/main/evaluation/semantic_segmentation) codebase.
 
 The code and scripts is in `main` branch.
