@@ -12,14 +12,17 @@ def adjust_learning_rate(optimizer, epoch, args):
     """Decay the learning rate with half-cycle cosine after warmup"""
     # after warm-up use cosine learning rate
 
-    end_epoch = 0.0
-    #compute effective epoch for multi stage
-    for index, num in enumerate(args.stage_epochs):
-        if epoch < num:
-            start_epoch = args.stage_epochs[index-1]
-            end_epoch = num - start_epoch
-            epoch -= start_epoch
-            break
+    if hasattr(args, 'stage_epochs'):
+        end_epoch = 0.0
+        #compute effective epoch for multi stage
+        for index, num in enumerate(args.stage_epochs):
+            if epoch < num:
+                start_epoch = args.stage_epochs[index-1]
+                end_epoch = num - start_epoch
+                epoch -= start_epoch
+                break
+    else:
+        end_epoch = args.epochs
 
 
     warmup_epochs = args.warmup_epochs
