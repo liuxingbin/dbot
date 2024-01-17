@@ -12,6 +12,7 @@ This is the official PyTorch implementation of [Exploring Target Representations
 
 
 ## News :tada:
+- January 2024 - The paper is accepted by ICLR 2024.
 - November 2022 - Release the code and pre-trained [models](https://github.com/liuxingbin/dbot#pre-trained-and-fine-tuned-models).
 - September 2022 - Release the pre-print on [arXiv](https://arxiv.org/abs/2209.03917).
 
